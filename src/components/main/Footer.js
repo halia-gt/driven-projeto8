@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
         <footer>
-            <strong>
+            {/* <strong>
                 <img src="./assets/img/sad.png" alt="" />
                 Putz...
             </strong>
@@ -10,8 +10,8 @@ export default function Footer() {
                 <img src="./assets/img/party.png" alt="" />
                 Parabéns
             </strong>
-            <p>Você não esqueceu de nenhum flashcard!</p>
-            <p><span>0</span>/4 CONCLUÍDOS</p>
+            <p>Você não esqueceu de nenhum flashcard!</p> */}
+            <h2><span>0</span>/4 CONCLUÍDOS</h2>
             <div className="icons">
                 <ion-icon name="close-circle"></ion-icon>
                 <ion-icon name="help-circle"></ion-icon>
