@@ -1,0 +1,31 @@
+footer {
+    min-height: 70px;
+    width: 100vw;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    z-index: 1;
+}
+
+footer img {
+    margin-right: 13px;
+}
+
+footer p {
+    margin-top: 15px;
+    width: 60vw;
+    text-align: center;
+    line-height: 22px;
+}
+
+.icons {
+    display: flex;
+    margin-top: 0.3em;
+}
