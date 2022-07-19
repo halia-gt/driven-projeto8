@@ -1,4 +1,4 @@
-export default function App() {
+export default function welcome() {
     return (
         <section class="welcome">
             <img src="./assets/img/logo.svg" alt="logo" />
