@@ -9,7 +9,6 @@ ul {
 }
 
 li {
-    height: 65px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,7 +44,7 @@ li img {
 }
 
 li.answer {
-    height: 130px;
+    min-height: 130px;
     background-color: #FFFFD4;
     align-items: flex-start;
     font-weight: 400;

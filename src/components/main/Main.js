@@ -1,12 +1,9 @@
-// import { useState } from "react";
 import Flashcard from "./Flashcard";
 
 export default function Main() {
-    // const [state, setState] = useState('');
-
     const deck = [{
             question: 'O que é JSX?',
-            answer: 'PJSX é uma sintaxe para escrever HTML dentro do JS'
+            answer: 'JSX é uma sintaxe para escrever HTML dentro do JS'
         }, {
             question: 'O React é __',
             answer: 'uma biblioteca JavaScript para construção de interfaces'
@@ -31,8 +28,6 @@ export default function Main() {
         }
     ]
 
-
-
     return (
         <main>
             <ul>
@@ -41,7 +36,7 @@ export default function Main() {
                     <img src="./assets/img/seta.svg" alt="turn" />
                 </li>
                 <li className="answer">
-                    <p>PJSX é uma sintaxe para escrever HTML dentro do JS</p>
+                    <p>dizer para o React quais informações quando atualizadas devem renderizar a tela novamente</p>
                     <div className="choices">
                         <div className="choice incorrect">
                             Não lembrei
