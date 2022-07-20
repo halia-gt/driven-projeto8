@@ -28,6 +28,7 @@ button {
     font-family: 'Recursive', sans-serif;
     text-align: center;
     cursor: pointer;
+    font-size: 18px;
 }
 
 strong {
