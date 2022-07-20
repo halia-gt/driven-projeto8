@@ -1,7 +1,11 @@
+main {
+    width: 100vw;
+    overflow: auto;
+}
+
 ul {
     width: 90vw;
     margin: 0 auto 95px auto;
-    overflow-y: scroll;
 }
 
 li {
@@ -54,6 +58,7 @@ li.answer .choices {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 li.answer .choices .choice {
@@ -93,6 +98,13 @@ li.answered.almost {
 
 li.answered.correct {
     color: #2FBE34;
+}
+
+@media (min-width: 600px) {
+    ul {
+        overflow-y: hidden;
+        width: 600px;
+    }
 }
 
 

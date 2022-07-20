@@ -25,7 +25,7 @@ footer p{
     line-height: 22px;
 }
 
-.icons {
+footer .icons {
     display: flex;
     margin-top: 0.3em;
 }
