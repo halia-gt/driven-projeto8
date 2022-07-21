@@ -4,7 +4,7 @@ import Numbered from './Numbered';
 import Answer from './Answer';
 import Answered from './Answered';
 
-export default function Flashcard({question, answer, index, count, icons, setIcons, setCount}) {
+export default function Flashcard({question, answer, index, icons, setIcons}) {
     const [state, setState] = useState('numbered');
     const [answered, setAnswered] = useState('');
     const [icon, setIcon] = useState('');
@@ -16,7 +16,7 @@ export default function Flashcard({question, answer, index, count, icons, setIco
             );
         case 'answer':  
             return (
-                <Answer answer={answer} setAnswered={setAnswered} icons={icons} setIcons={setIcons} setIcon={setIcon} setState={setState} count={count} setCount={setCount} />
+                <Answer answer={answer} setAnswered={setAnswered} icons={icons} setIcons={setIcons} setIcon={setIcon} setState={setState} />
             );
         case 'answered':
             return (

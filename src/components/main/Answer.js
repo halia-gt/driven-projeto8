@@ -1,7 +1,6 @@
-export default function Answer({answer, setAnswered, icons, setIcons, setIcon, setState, count, setCount}) {
+export default function Answer({answer, setAnswered, icons, setIcons, setIcon, setState}) {
     function showAnswered() {
         setState('answered');
-        setCount(count + 1);
     }
 
     function setAnswerStatus(status, iconName) {

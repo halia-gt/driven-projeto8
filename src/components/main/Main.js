@@ -4,7 +4,6 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 export default function Main() {
-    const [count, setCount] = useState(0);
     const [icons, setIcons] = useState([]);
 
     const deck = [{
@@ -50,14 +49,12 @@ export default function Main() {
                 {deck.map((card, index) => (<Flashcard
                     key={index}
                     index={index+1}
-                    count={count}
                     icons={icons}
                     setIcons={setIcons}
-                    setCount={setCount}
                     {...card}
                 />))}
             </ul>
-            <Footer icons={icons} />
+            <Footer icons={icons} size={deck.length} />
         </main>
     )
 }
