@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer({ icons }) {
     return (
         <footer>
             {/* <strong>
@@ -13,12 +13,10 @@ export default function Footer() {
             <p>Você não esqueceu de nenhum flashcard!</p> */}
             <h2><span>0</span>/4 CONCLUÍDOS</h2>
             <div className="icons">
-                <ion-icon name="close-circle"></ion-icon>
-                <ion-icon name="help-circle"></ion-icon>
-                <ion-icon name="checkmark-circle"></ion-icon>
-                <ion-icon name="checkmark-circle"></ion-icon>
-                <ion-icon name="checkmark-circle"></ion-icon>
-                <ion-icon name="checkmark-circle"></ion-icon>
+                {icons.map( (icon, index) => {
+                    const iconName = `${icon}-circle`;
+                    return <ion-icon name={iconName} key={index}></ion-icon>
+                })}
             </div>
         </footer>
     )

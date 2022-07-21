@@ -1,11 +1,13 @@
-export default function Answer({answer, setAnswered, setIcon, setState}) {
+export default function Answer({answer, setAnswered, icons, setIcons, setIcon, setState, count, setCount}) {
     function showAnswered() {
         setState('answered');
+        setCount(count + 1);
     }
 
-    function setAnswerStatus(status, icon) {
+    function setAnswerStatus(status, iconName) {
         setAnswered(status);
-        setIcon(icon);
+        setIcons([...icons, iconName]);
+        setIcon(iconName);
     }
 
     return (
@@ -13,20 +15,20 @@ export default function Answer({answer, setAnswered, setIcon, setState}) {
             <p>{answer}</p>
             <div className="choices">
                 <div className="choice incorrect" onClick={() => {
-                    showAnswered();
                     setAnswerStatus('incorrect', 'close');
+                    showAnswered();
                 }}>
                     Não lembrei
                 </div>
                 <div className="choice almost" onClick={() => {
-                    showAnswered();
                     setAnswerStatus('almost', 'help');
+                    showAnswered();
                 }}>
                     Quase não lembrei
                 </div>
                 <div className="choice correct" onClick={() => {
-                    showAnswered();
                     setAnswerStatus('correct', 'checkmark');
+                    showAnswered();
                 }}>
                     Zap!
                 </div>
