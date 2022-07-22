@@ -1,3 +1,5 @@
+import turn from "../../assets/img/seta.svg";
+
 export default function Question({question, setState}) {
     function showAnswer() {
         setState('answer');
@@ -6,7 +8,7 @@ export default function Question({question, setState}) {
     return (
         <li className="question">
             <p>{question}</p>
-            <img src="./assets/img/seta.svg" alt="turn" onClick={showAnswer} />
+            <img src={turn} alt="turn" onClick={showAnswer} />
         </li>
     )
 }

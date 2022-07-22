@@ -12,11 +12,11 @@ export default function Flashcard({question, answer, index, icons, setIcons}) {
     switch (state) {
         case 'question':
             return (
-                <Question question={question} setState={setState} />
+                <Question setState={setState} question={question} />
             );
         case 'answer':  
             return (
-                <Answer answer={answer} setAnswered={setAnswered} icons={icons} setIcons={setIcons} setIcon={setIcon} setState={setState} />
+                <Answer setAnswered={setAnswered} icons={icons} setIcons={setIcons} setIcon={setIcon} setState={setState} answer={answer} />
             );
         case 'answered':
             return (

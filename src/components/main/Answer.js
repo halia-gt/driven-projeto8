@@ -1,10 +1,10 @@
-export default function Answer({answer, setAnswered, icons, setIcons, setIcon, setState}) {
+export default function Answer({setAnswered, icons, setIcons, setIcon, setState, answer}) {
     function showAnswered() {
         setState('answered');
     }
 
-    function setAnswerStatus(status, iconName) {
-        setAnswered(status);
+    function setAnswerStatus(zapStatus, iconName) {
+        setAnswered(zapStatus);
         setIcons([...icons, iconName]);
         setIcon(iconName);
     }

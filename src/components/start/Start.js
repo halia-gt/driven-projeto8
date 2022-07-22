@@ -1,4 +1,4 @@
-import Header from '../main/Header';
+import Header from "../main/Header";
 
 export default function Start({startScreen, setStartScreen}) {
     return (
