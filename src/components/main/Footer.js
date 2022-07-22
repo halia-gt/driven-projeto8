@@ -1,6 +1,8 @@
-export default function Footer({ icons, size }) {
+import RestartButton from './RestartButton';
+
+export default function Footer({icons, size}) {
     function Complete() {
-        if (icons.length === size && icons.includes('close')) {
+        if (isCompleted() && icons.includes('close')) {
             return (
                 <>
                     <strong>
@@ -10,7 +12,7 @@ export default function Footer({ icons, size }) {
                     <p>Ainda faltam alguns... Mas não desanime!</p>
                 </>
             )
-        } else if (icons.length === size && !icons.includes('close')) {
+        } else if (isCompleted() && !icons.includes('close')) {
             return (
                 <>
                     <strong>
@@ -25,6 +27,10 @@ export default function Footer({ icons, size }) {
         }
     }
 
+    function isCompleted() {
+        return (icons.length === size);
+    }
+
     return (
         <footer>
             <Complete />
@@ -35,6 +41,7 @@ export default function Footer({ icons, size }) {
                     return <ion-icon name={iconName} key={index}></ion-icon>
                 })}
             </div>
+            <RestartButton isCompleted={isCompleted} />
         </footer>
     )
 }

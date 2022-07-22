@@ -29,3 +29,15 @@ footer .icons {
     display: flex;
     margin-top: 0.3em;
 }
+
+button.restart {
+    width: 167px;
+    height: 32px;
+    background: #FB6B6B;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 1em;
+}
