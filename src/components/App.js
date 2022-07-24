@@ -11,13 +11,19 @@ import "../assets/css/footer.css";
 export default function App() {
     const [startScreen, setStartScreen] = useState(true);
     const [zapGoals, setZapGoals] = useState('0');
+    const [deckType, setDeckType] = useState('');
 
     return (
         <>
             {startScreen ? (
-                <Start setStartScreen={setStartScreen} zapGoals={parseInt(zapGoals)} setZapGoals={setZapGoals}  />
+                <Start setStartScreen={setStartScreen}
+                zapGoals={parseInt(zapGoals)}
+                setZapGoals={setZapGoals}
+                deckType={deckType}
+                setDeckType={setDeckType}
+                />
             ) : (
-                <Main setStartScreen={setStartScreen} zapGoals={parseInt(zapGoals)}/>
+                <Main setStartScreen={setStartScreen} zapGoals={parseInt(zapGoals)} deckType={deckType}/>
             )}
         </>
     )

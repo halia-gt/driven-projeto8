@@ -14,7 +14,7 @@
 
 .start header img {
     width: 136px;
-    margin-top: 20vh;
+    margin-top: 15vh;
 }
 
 .start button {
@@ -36,11 +36,23 @@
     height: 43px;
     background: #FFFFFF;
     border-radius: 5px;
-    color: #FB6B6B;
+    color: #333333;
     border: none;
     padding: 7px;
+    margin-top: 1em;
 }
 
 .start input::placeholder {
     color: #ADADAD;
+}
+
+.start select {
+    width: 246px;
+    height: 43px;
+    border-radius: 5px;
+    border: none;
+    font-family: 'Recursive', sans-serif;
+    color: #333333;
+    font-size: 14px;
+    padding: 7px;
 }

@@ -1,9 +1,9 @@
 import Header from "../main/Header";
 
-export default function Start({setStartScreen, setZapGoals, zapGoals}) {
+export default function Start({setStartScreen, setZapGoals, zapGoals, deckType, setDeckType}) {
 
     function renderFlashcards() {
-        if(zapGoals > 0 && zapGoals <= 8) {
+        if(zapGoals > 0 && zapGoals <= 8 && deckType !== "") {
             setStartScreen(false);
         }
     }
@@ -11,12 +11,12 @@ export default function Start({setStartScreen, setZapGoals, zapGoals}) {
     return (
         <section className="start">
             <Header />
-            {/* <label for="deck">Escolha um deck:</label>
-            <select name="deck" id="deck" required>
+            <select name="deck" id="deck" onChange={(e) => setDeckType(e.target.value)} required>
+                <option value="">Escolha um deck:</option>
                 <option value="react">React</option>
                 <option value="javascript">Javascript</option>
-                <option value="HTML/CSS">HTML e CSS</option>
-            </select> */}
+                <option value="html">HTML e CSS</option>
+            </select>
             <input
                 type="number"
                 name="start"
@@ -24,7 +24,7 @@ export default function Start({setStartScreen, setZapGoals, zapGoals}) {
                 placeholder="Digite sua meta de zaps..."
                 required>
             </input>
-            <button type="button" className={zapGoals === 0 ? "disabled" : ""} onClick={renderFlashcards}>Iniciar Recall!</button>
+            <button type="button" className={(zapGoals === 0 || deckType === "") ? "disabled" : ""} onClick={renderFlashcards}>Iniciar Recall!</button>
         </section>
     )
 }

@@ -30,55 +30,55 @@ const deckOptions = {
         answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente',
     }],
     javascript: [{
-        question: 'O que é JSX?',
-        answer: 'JSX é uma sintaxe para escrever HTML dentro do JS',
+        question: 'Quais os tipos de dados do JavaScript?',
+        answer: 'Number, string, boolean, objeto e undefined',
     }, {
-        question: 'O React é __',
-        answer: 'uma biblioteca JavaScript para construção de interfaces',
+        question: 'O que a função isNan faz?',
+        answer: 'Retorna true se o argumento é not a number e false se não for',
     }, {
-        question: 'Componentes devem iniciar com __',
-        answer: 'letra maiúscula',
+        question: 'O que é prompt?',
+        answer: 'É uma caixa que permite a entrada de texto pelo usuário',
     }, {
-        question: 'Podemos colocar __ dentro do JSX',
-        answer: 'expressões',
+        question: 'O que é o operador ===?',
+        answer: 'É um operador restrito, retornando true quando dois valores são iguais em valor e tipo',
     }, {
-        question: 'O ReactDOM nos ajuda __',
-        answer: 'interagindo com a DOM para colocar componentes React na mesma',
+        question: 'Qual o resultado de 3+2+"7"',
+        answer: '57',
     }, {
-        question: 'Usamos o npm para __',
-        answer: 'gerenciar os pacotes necessários e suas dependências',
+        question: 'O que é null em JavaScript?',
+        answer: 'É usado pra representar algo sem valor ou inexistente',
     }, {
-        question: 'Usamos props para __',
-        answer: 'passar diferentes informações para componentes',
+        question: 'Quais os tipo de pop-up disponíveis em JavaScript?',
+        answer: 'alert, confirm e prompt',
     }, {
-        question: 'Usamos estado (state) para __',
-        answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente',
+        question: 'O que é type of?',
+        answer: 'Um operador que retorna uma string indicando o tipo de variável',
     }],
     html: [
         {
-            question: 'O que é JSX?',
-            answer: 'JSX é uma sintaxe para escrever HTML dentro do JS',
+            question: 'Onde referenciar stylesheet externa no HTML?',
+            answer: 'na tag <head>',
         }, {
-            question: 'O React é __',
-            answer: 'uma biblioteca JavaScript para construção de interfaces',
+            question: 'Qual propriedade altera a cor de fundo?',
+            answer: 'background-color',
         }, {
-            question: 'Componentes devem iniciar com __',
-            answer: 'letra maiúscula',
+            question: '__ é usado para alterar a cor de um elemento',
+            answer: 'color',
         }, {
-            question: 'Podemos colocar __ dentro do JSX',
-            answer: 'expressões',
+            question: 'vh e % são __ em CSS',
+            answer: 'unidades',
         }, {
-            question: 'O ReactDOM nos ajuda __',
-            answer: 'interagindo com a DOM para colocar componentes React na mesma',
+            question: 'Qual a tag genérica com diplay inline do HTML?',
+            answer: '<span>',
         }, {
-            question: 'Usamos o npm para __',
-            answer: 'gerenciar os pacotes necessários e suas dependências',
+            question: 'Como retirar o underline de uma tag <a>?',
+            answer: 'a { text-decoration: none; }',
         }, {
-            question: 'Usamos props para __',
-            answer: 'passar diferentes informações para componentes',
+            question: 'Qual a tag semântica apropriada para rodapés?',
+            answer: '<footer>',
         }, {
-            question: 'Usamos estado (state) para __',
-            answer: 'dizer para o React quais informações quando atualizadas devem renderizar a tela novamente',
+            question: 'Como remover o estilo padrão do navegador?',
+            answer: 'Usando CSS reset',
         }
     ]
 };
@@ -92,15 +92,21 @@ function shuffle(array) {
 
 
 
-export default function Main({setStartScreen, zapGoals}) {
+export default function Main({setStartScreen, zapGoals, deckType}) {
+    let deck;
+    if (deckType === 'react') {
+        deck = deckOptions.react;
+    } else if (deckType === 'javascript') {
+        deck = deckOptions.javascript;
+    } else if (deckType === 'html') {
+        deck = deckOptions.html;
+    }
 
     const [icons, setIcons] = useState([]);
-    const deck = deckOptions.react;
 
     if (icons.length === 0) {
         shuffle(deck);
     }
-    console.log(deck);
 
     return (
         <main>
