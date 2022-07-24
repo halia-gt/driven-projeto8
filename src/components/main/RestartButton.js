@@ -1,4 +1,4 @@
-export default function RestartButton({isCompleted, deck, setDeck, setIcons, shuffle}) {
+export default function RestartButton({isCompleted, deck, setDeck, setIcons, shuffle, setStartScreen}) {
 
 
         function restart() {
@@ -6,6 +6,7 @@ export default function RestartButton({isCompleted, deck, setDeck, setIcons, shu
             const newDeck = [...deck];
             shuffle(newDeck);
             setDeck(newDeck);
+            setStartScreen(true);
         }
 
 

@@ -1,6 +1,6 @@
 import RestartButton from './RestartButton';
 
-export default function Footer({icons, setDeck, deck, setIcons, shuffle}) {
+export default function Footer({icons, setDeck, deck, setIcons, shuffle, setStartScreen}) {
     function Complete() {
         if (isCompleted() && icons.includes('close')) {
             return (
@@ -41,7 +41,7 @@ export default function Footer({icons, setDeck, deck, setIcons, shuffle}) {
                     return <ion-icon name={iconName} key={index}></ion-icon>
                 })}
             </div>
-            <RestartButton isCompleted={isCompleted} deck={deck} setDeck={setDeck} setIcons={setIcons} shuffle={shuffle} />
+            <RestartButton isCompleted={isCompleted} deck={deck} setDeck={setDeck} setIcons={setIcons} shuffle={shuffle} setStartScreen={setStartScreen} />
         </footer>
     )
 }

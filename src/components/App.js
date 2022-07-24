@@ -13,9 +13,9 @@ export default function App() {
     return (
         <>
             {startScreen ? (
-                <Start startScreen={startScreen} setStartScreen={setStartScreen} />
+                <Start setStartScreen={setStartScreen} />
             ) : (
-                <Main />
+                <Main setStartScreen={setStartScreen} />
             )}
         </>
     )

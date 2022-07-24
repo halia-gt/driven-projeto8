@@ -30,18 +30,21 @@ const deckOption = [{
 }
 ];
 
-export default function Main() {
-    function shuffle(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            let j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
     }
+}
 
-    shuffle(deckOption);
+shuffle(deckOption);
+
+export default function Main({setStartScreen}) {
 
     const [icons, setIcons] = useState([]);
     const [deck, setDeck] = useState(deckOption);
+
+    console.log(deck);
 
     return (
         <main>
@@ -55,7 +58,7 @@ export default function Main() {
                     {...card}
                 />))}
             </ul>
-            <Footer icons={icons} deck={deck} setDeck={setDeck} setIcons={setIcons} shuffle={shuffle} />
+            <Footer icons={icons} deck={deck} setDeck={setDeck} setIcons={setIcons} shuffle={shuffle} setStartScreen={setStartScreen} />
         </main>
     )
 }
