@@ -10,12 +10,14 @@ import "../assets/css/footer.css";
 
 export default function App() {
     const [startScreen, setStartScreen] = useState(true);
+    const [zapGoals, setZapGoals] = useState('0');
+
     return (
         <>
             {startScreen ? (
-                <Start setStartScreen={setStartScreen} />
+                <Start setStartScreen={setStartScreen} zapGoals={parseInt(zapGoals)} setZapGoals={setZapGoals}  />
             ) : (
-                <Main setStartScreen={setStartScreen} />
+                <Main setStartScreen={setStartScreen} zapGoals={parseInt(zapGoals)}/>
             )}
         </>
     )

@@ -24,3 +24,23 @@
 .start header h1 {
     margin-top: 1em;
 }
+
+.start button.disabled {
+    background-color: #E8E8E8;
+    color: #C0C0C0;
+    border: none;
+}
+
+.start input {
+    width: 246px;
+    height: 43px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    color: #FB6B6B;
+    border: none;
+    padding: 7px;
+}
+
+.start input::placeholder {
+    color: #ADADAD;
+}

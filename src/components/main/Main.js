@@ -39,7 +39,7 @@ function shuffle(array) {
 
 shuffle(deckOption);
 
-export default function Main({setStartScreen}) {
+export default function Main({setStartScreen, zapGoals}) {
 
     const [icons, setIcons] = useState([]);
     const [deck, setDeck] = useState(deckOption);
@@ -58,7 +58,7 @@ export default function Main({setStartScreen}) {
                     {...card}
                 />))}
             </ul>
-            <Footer icons={icons} deck={deck} setDeck={setDeck} setIcons={setIcons} shuffle={shuffle} setStartScreen={setStartScreen} />
+            <Footer icons={icons} deck={deck} setDeck={setDeck} setIcons={setIcons} shuffle={shuffle} setStartScreen={setStartScreen} zapGoals={parseInt(zapGoals)} />
         </main>
     )
 }

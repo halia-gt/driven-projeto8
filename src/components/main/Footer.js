@@ -1,8 +1,8 @@
 import RestartButton from './RestartButton';
 
-export default function Footer({icons, setDeck, deck, setIcons, shuffle, setStartScreen}) {
+export default function Footer({icons, setDeck, deck, setIcons, shuffle, setStartScreen, zapGoals}) {
     function Complete() {
-        if (isCompleted() && icons.includes('close')) {
+        if (isCompleted() && !verifyZaps()) {
             return (
                 <>
                     <strong>
@@ -12,19 +12,29 @@ export default function Footer({icons, setDeck, deck, setIcons, shuffle, setStar
                     <p>Ainda faltam alguns... Mas não desanime!</p>
                 </>
             )
-        } else if (isCompleted() && !icons.includes('close')) {
+        } else if (isCompleted() && verifyZaps()) {
             return (
                 <>
                     <strong>
                         <img src="./assets/img/party.png" alt="" />
                         Parabéns
                     </strong>
-                    <p>Você não esqueceu de nenhum flashcard!</p>
+                    <p>Você concluiu a meta de Zaps!</p>
                 </>
             )
         } else {
             return (<></>)
         }
+    }
+
+    function verifyZaps() {
+        let countZap = 0;
+        icons.forEach(icon => {
+            if (icon === 'checkmark') {
+                countZap++;
+            }
+        })
+        return (countZap >= zapGoals);
     }
 
     function isCompleted() {
