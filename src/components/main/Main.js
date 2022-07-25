@@ -125,5 +125,5 @@ export default function Main({setStartScreen, zapGoals, deckType}) {
             </ul>
             <Footer icons={icons} setStartScreen={setStartScreen} zapGoals={parseInt(zapGoals)} deck={deck} />
         </main>
-    )
+    );
 }

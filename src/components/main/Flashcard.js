@@ -21,7 +21,7 @@ export default function Flashcard({question, answer, index, icons, setIcons}) {
         case 'answered':
             return (
                 <Answered answered={answered} index={index} icon={icon} />
-            )
+            );
         default:
             return (
                 <Numbered index={index} setState={setState} />

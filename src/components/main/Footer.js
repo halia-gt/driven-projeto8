@@ -11,7 +11,7 @@ export default function Footer({icons, setStartScreen, zapGoals, deck}) {
                     </strong>
                     <p>Ainda faltam alguns... Mas não desanime!</p>
                 </>
-            )
+            );
         } else if (isCompleted() && verifyZaps()) {
             return (
                 <>
@@ -21,9 +21,9 @@ export default function Footer({icons, setStartScreen, zapGoals, deck}) {
                     </strong>
                     <p>Você concluiu a meta de Zaps!</p>
                 </>
-            )
+            );
         } else {
-            return (<></>)
+            return (<></>);
         }
     }
 
@@ -48,10 +48,10 @@ export default function Footer({icons, setStartScreen, zapGoals, deck}) {
             <div className="icons">
                 {icons.map( (icon, index) => {
                     const iconName = `${icon}-circle`;
-                    return <ion-icon name={iconName} key={index}></ion-icon>
+                    return (<ion-icon name={iconName} key={index}></ion-icon>);
                 })}
             </div>
             <RestartButton isCompleted={isCompleted} setStartScreen={setStartScreen} />
         </footer>
-    )
+    );
 }

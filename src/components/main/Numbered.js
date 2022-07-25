@@ -8,5 +8,5 @@ export default function Numbered({index, setState}) {
             <p>Pergunta <span>{index}</span></p>
             <ion-icon name="play-outline" onClick={showQuestion}></ion-icon>
         </li>
-    )
+    );
 }

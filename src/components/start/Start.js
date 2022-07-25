@@ -33,5 +33,5 @@ export default function Start({setStartScreen, setZapGoals, zapGoals, deckType, 
             </input>
             <button type="button" className={(zapGoals > 0 && isCorrectType()) ? "" : "disabled"} onClick={renderFlashcards}>Iniciar Recall!</button>
         </section>
-    )
+    );
 }

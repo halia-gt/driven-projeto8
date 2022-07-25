@@ -10,5 +10,5 @@ export default function Question({question, setState}) {
             <p>{question}</p>
             <img src={turn} alt="turn" onClick={showAnswer} />
         </li>
-    )
+    );
 }

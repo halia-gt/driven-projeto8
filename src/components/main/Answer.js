@@ -33,5 +33,5 @@ export default function Answer({setAnswered, icons, setIcons, setIcon, setState,
                 </div>
             </div>
         </li>
-    )
+    );
 }

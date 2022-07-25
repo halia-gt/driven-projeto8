@@ -7,5 +7,5 @@ export default function Question({answered, icon, index}) {
             <p>Pergunta <span>{index}</span></p>
             <ion-icon name={iconName}></ion-icon>
         </li>
-    )
+    );
 }

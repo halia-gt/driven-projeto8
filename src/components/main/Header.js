@@ -6,5 +6,5 @@ export default function Header() {
             <img src={logo} alt="logo" />
             <h1>ZapRecall</h1>
         </header>
-    )
+    );
 }
