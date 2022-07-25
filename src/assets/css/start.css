@@ -14,7 +14,7 @@
 
 .start header img {
     width: 136px;
-    margin-top: 15vh;
+    margin-top: 10vh;
 }
 
 .start button {
@@ -31,8 +31,10 @@
     border: none;
 }
 
-.start input {
-    width: 246px;
+.start input,
+.start select {
+    width: 90vw;
+    max-width: 600px;
     height: 43px;
     background: #FFFFFF;
     border-radius: 5px;
@@ -47,12 +49,7 @@
 }
 
 .start select {
-    width: 246px;
-    height: 43px;
-    border-radius: 5px;
-    border: none;
     font-family: 'Recursive', sans-serif;
     color: #333333;
     font-size: 14px;
-    padding: 7px;
 }

@@ -1,6 +1,6 @@
 import RestartButton from './RestartButton';
 
-export default function Footer({icons, setStartScreen, zapGoals}) {
+export default function Footer({icons, setStartScreen, zapGoals, deck}) {
     function Complete() {
         if (isCompleted() && !verifyZaps()) {
             return (
@@ -38,13 +38,13 @@ export default function Footer({icons, setStartScreen, zapGoals}) {
     }
 
     function isCompleted() {
-        return (icons.length === 8);
+        return (icons.length === deck.length);
     }
 
     return (
         <footer>
             <Complete />
-            <h2>{icons.length}/8 CONCLUÍDOS</h2>
+            <h2>{icons.length}/{deck.length} CONCLUÍDOS</h2>
             <div className="icons">
                 {icons.map( (icon, index) => {
                     const iconName = `${icon}-circle`;
