@@ -9,7 +9,10 @@ export default function Start({setStartScreen, setZapGoals, zapGoals, deckType, 
     }
     
     function isCorrectType() {
-        if ((zapGoals <= 8 && deckType === 'react') || (zapGoals <= 7 && deckType === 'javascript') || (zapGoals <= 10 && deckType === 'html')) {
+        const reactCards = 8;
+        const javaScriptCards = 7;
+        const htmlCards = 10;
+        if ((zapGoals <= reactCards && deckType === 'react') || (zapGoals <= javaScriptCards && deckType === 'javascript') || (zapGoals <= htmlCards && deckType === 'html')) {
             return true;
         }
         return false;

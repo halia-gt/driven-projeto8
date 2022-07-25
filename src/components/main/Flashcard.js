@@ -14,7 +14,7 @@ export default function Flashcard({question, answer, index, icons, setIcons}) {
             return (
                 <Question setState={setState} question={question} />
             );
-        case 'answer':  
+        case 'answer':
             return (
                 <Answer setAnswered={setAnswered} icons={icons} setIcons={setIcons} setIcon={setIcon} setState={setState} answer={answer} />
             );
